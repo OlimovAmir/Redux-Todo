@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import './App.css';
+const { v4: uuidv4 } = require('uuid');
 
 function App() {
 
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState('');
-
+  const ID = uuidv4();
   const addTodo = ()=>{
     if (text.trim().length) {
       
       setText([
         ...todos,
         {
-          id: '',
+          id: ID,
         } 
 
       ])
