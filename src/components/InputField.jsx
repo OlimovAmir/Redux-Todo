@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function InputField({text, handleInput, handleSubmit}) {
   return (
     <label>
